@@ -1,2 +1,2 @@
 #!/bin/bash
-ilsb_release -is | cut -c1-
+lsb_release -is | cut -c1-
