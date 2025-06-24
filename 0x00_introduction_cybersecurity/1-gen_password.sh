@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(date +%s%N | sha256sum | head -c32)
+tr -dc '[:alnum:]' < /dev/urandom | head -c "${1:-20}"; echo
