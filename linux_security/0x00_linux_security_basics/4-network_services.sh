@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -ltunp
+sudo netstat -ltunp
