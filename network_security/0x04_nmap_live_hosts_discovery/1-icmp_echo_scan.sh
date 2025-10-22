@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -z "$1" ] && echo "Usage: $0 <subnet>" && exit 1 || sudo nmap -sn -PE $1
+sudo nmap -PE -sn $1
