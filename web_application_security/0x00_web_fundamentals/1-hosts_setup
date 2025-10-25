@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo sed -i "/web0x00.hbtn/d" /etc/hosts && echo "$1 web0x00.hbtn" | sudo tee -a /etc/hosts

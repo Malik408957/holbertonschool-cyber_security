@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -s http://web0x00.hbtn/login > /dev/null && echo "SUCCESS" || echo "FAILED"

