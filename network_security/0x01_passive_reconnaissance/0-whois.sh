@@ -1,2 +1,2 @@
 #!/bin/bash
-whois $1 | awk -F':' 'BEGIN{OFS=","} /[Rr]egistrant/&&!/[Rr]egistrar/{s="Registrant"} /[Aa]dmin/&&!/[Rr]egistrar/{s="Admin"} /[Tt]ech/&&!/[Rr]egistrar/{s="Tech"} s&&/^[ ]*[A-Z][a-zA-Z\/ -]+:/&&NF>=2{gsub(/^[ ]+|[ ]+$/,"",$1);gsub(/^[ ]+|[ ]+$/,"",$2);if($1!~/Name Server|URL|DNSSEC|Registrar|>>>/&&$2!="")print s" "$1,($1~/Street/)?$2" ":$2}' > "${1}.csv"
+whois "$1" | awk -F: '/^(Registrant|Admin|Tech) / { gsub(/^[ \t]+/, "", $2); field=$1; gsub(/[ \t]+$$ /, "", field); ext = (field ~ /(Phone|Fax) Ext $$/); printf "%s%s,%s\n", field, (ext ? ":" : ""), (length($2)>0 ? $2 : " ") }' > "$1".csv
