@@ -1,2 +1,2 @@
 #!/bin/bash
-john --format=raw-sha256 "$1" --show > 6-password.txt
+john --show --format=raw-sha256 "$1" | grep -E "^[^:]+:[^:]+$" | cut -d: -f2 > 6-password.txt
