@@ -1,3 +1,2 @@
 #!/bin/bash
-iptables -P INPUT DROP
-iptables -A INPUT -p tcp --dport ssh -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -s $1 -j ACCEPT && sudo iptables -A INPUT -j DROP
