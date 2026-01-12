@@ -1,2 +1,3 @@
 #!/bin/bash
-cat $1 | cut -d " " -f1 | uniq -c | sort -nr | head -1 | awk '{print $2}'
+
+cut -d " " -f1 $1 | sort | uniq -c | sort -nr | head -1 | awk '{print $2}'
