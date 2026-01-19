@@ -1,2 +1,7 @@
 #!/bin/bash
-cut -d " " -f7 auth.log | sort | uniq -c  | sort -nr
+grep "pam_unix" auth.log \
+| cut -d '(' -f2 \
+| cut -d ':' -f1 \
+| sort \
+| uniq -c \
+| sort -rn
