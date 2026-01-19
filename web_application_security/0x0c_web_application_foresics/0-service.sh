@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d " " -f7 auth.log | sort | uniq -c  | sort -nr
+cut -d " " -f8 auth.log | sort | uniq -c  | sort -nr
